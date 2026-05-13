@@ -7,6 +7,8 @@ This is the vanilla variant — styled with a branded landing page and a few doc
 > Looking for the variant with Cloudflare bindings (D1, R2, KV)?
 > See [`hello-world-astro6-app-bindings`](https://github.com/Webflow-Examples/hello-world-astro6-app-bindings).
 
+[![Deploy to Webflow](https://webflow.com/img/deploy-dark.svg)](https://webflow.com/dashboard/cloud/deploy?repo=https://github.com/Webflow-Examples/hello-world-astro6-app)
+
 ## Requirements
 
 - Node **22.12+** (see `engines`).
