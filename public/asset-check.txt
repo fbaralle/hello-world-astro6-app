@@ -1,0 +1,5 @@
+webflow-cloud static-asset serving check — CLOUD-590 (Astro 6/7 double-nest).
+
+Deploy this app at a NON-ROOT mount (e.g. /app), then:
+  FIXED  -> GET https://<host>/<mount>/asset-check.txt      returns 200 + this text
+  BUG    -> that 404s, and the file is instead at /<mount>/<mount>/asset-check.txt
