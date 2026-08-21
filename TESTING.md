@@ -12,6 +12,12 @@ mount again → assets land at `assets/<mount>/<mount>/…` → served at `/<mou
 → **404** at the URL the page references. The page still renders (SSR), but its CSS,
 favicon, and images are broken.
 
+> **Why `astro` is pinned to `6.4.8`.** The double-nest only triggers when the build
+> actually nests the client under the mount, and that is astro-version-dependent:
+> astro `6.1.4` builds a **flat** `dist/client/` (so the old copy lands it correctly —
+> the bug does NOT reproduce), while `6.4.8`+ nests under `dist/client/<mount>/`. This
+> branch pins `6.4.8` so the nesting path is exercised and the bug reproduces reliably.
+
 ## Assets in this branch
 
 - `public/asset-check.txt` — plain-text marker at a known path (easy to `curl`).
